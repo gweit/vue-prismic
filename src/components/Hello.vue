@@ -2,6 +2,12 @@
   <div class='hello'>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <!-- <p>{{pot}}</p> -->
+    <div v-for="post in pot">
+      <!-- <p>{{post.data}}</p> -->
+      <h2 v-for="title in post.data.title">{{title.text}}</h2>
+      <p v-for="content in post.data.content">{{content.text}}</p>
+    </div>
     <ul>
       <li><a href='https://vuejs.org' target='_blank'>Core Docs</a></li>
       <li><a href='https://forum.vuejs.org' target='_blank'>Forum</a></li>
@@ -25,7 +31,8 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      pot: ''
     }
   },
   methods: {
@@ -35,8 +42,10 @@ export default {
       var apiEndpoint = 'https://gweit.prismic.io/api/v2'
       Prismic.getApi(apiEndpoint, { req: req }).then(function (api) {
         return api.query('') // An empty query will return all the documents
-      }).then(function (response) {
+      }).then((response) => {
         console.log('Documents: ', response.results)
+        this.pot = response.results
+        console.log(response.results)
       }, function (err) {
         console.log('Something went wrong: ', err)
       })
