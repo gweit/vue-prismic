@@ -1,4 +1,4 @@
-# vie-prismic
+# vue-prismic
 
 > vue prismic
 
