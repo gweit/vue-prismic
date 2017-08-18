@@ -1,6 +1,11 @@
 # vue-prismic
 
-> vue prismic
+> Vue.js Prismic.io Integration
+
+This is an Example on how to integrate prismic.io Headless CMS into Vue.js according to this:
+
+https://prismic.io/docs/javascript/getting-started/integrating-with-an-existing-javascript-project
+
 
 ## Build Setup
 
@@ -28,3 +33,14 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Steps i´ve done:
+
+* vue init webpack vue-prismic
+* npm install prismic-javascript prismic-dom --save (already added to the package.json in this repo)
+* npm run dev
+* alternated hello.vue with methods and beforeMount
+
+### Todo:
+
+* check production Build
