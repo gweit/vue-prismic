@@ -43,4 +43,5 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ### Todo:
 
-* check production Build
+* ~~check production Build~~
+* ~~loop through blog posts~~
